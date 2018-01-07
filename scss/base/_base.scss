@@ -1,0 +1,88 @@
+/* --- Base --- */
+
+::-webkit-scrollbar {
+    width: 17px;
+    height: 17px;
+    background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    width: 9px;
+    height: 9px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+body {
+    font-family: $font-family !important;
+    color: $font-color;
+    #pm_main {
+        color: $font-color;
+    }
+}
+
+.secure:not(.light) {
+    background: $body-background;
+}
+
+p a {
+    color: $primary-color;
+}
+
+html.protonmail {
+    .text-purple {
+        color: $primary-color !important;
+    }
+    .text-gray {
+        color: $font-color;
+    }
+    .text-light-gray {
+        color: #9E9E9E;
+    }
+    .text-green {
+        color: #8BC34A;
+    }
+    .text-yellow {
+        color: #FFEB3B;
+    }
+    .text-red {
+        color: #FF5722;
+    }
+    .text-purple {
+        color: $primary-color !important;
+    }
+}
+
+// Input placeholder
+html.protonmail :-moz-placeholder {
+    color: #9E9E9E;
+}
+
+html.protonmail ::-moz-placeholder {
+    color: #9E9E9E;
+}
+
+html.protonmail ::-webkit-input-placeholder {
+    color: #9E9E9E;
+}
+
+html.protonmail ::-ms-input-placeholder {
+    color: #9E9E9E;
+}
+
+// Header, Title of block container
+.headerBlock-container {
+    border-bottom: 1px solid $primary-color;
+}

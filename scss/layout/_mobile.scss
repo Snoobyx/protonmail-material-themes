@@ -1,0 +1,50 @@
+/* --- Mobile Layout --- */
+
+html.protonmail body.appConfigBody-is-mobile {
+    height: 100vh;
+    min-height: 100%;
+    &.appConfigBody-showSidebar #pm_main {
+        display: block;
+    }
+    #body #pm_main {
+        height: calc(100vh - #{$header-height});
+    }
+}
+
+body.appConfigBody-is-mobile {
+    // Mobile Header
+    .headerSecuredMobile-container {
+        height: $header-height;
+        padding: 0 8px;
+        box-sizing: border-box;
+    } // Sidebar
+    .sidebarApp-container {
+        top: $header-height;
+        height: calc(100% - #{$header-height});
+        min-width: $sidebar-width;
+        width: $sidebar-width;
+        padding: 12px 8px 52px;
+        background: $sidebar-background;
+        @include card-box-shadow-z2;
+    } // Settings
+    #pm_settings .settings {
+        padding: 0 32px;
+    }
+}
+
+// Sidebar Header
+.sidebarMobileHeader-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header-height;
+    padding: 0 8px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.toolbarMobile-container {
+    height: $header-height;
+}

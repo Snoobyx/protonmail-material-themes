@@ -1,0 +1,173 @@
+/* --- Settings --- */
+
+// Editor
+#pm_settings {
+    .editor-container,
+    .usage {
+        border: 1px solid #E0E0E0;
+    }
+    .settings {
+        .angular-squire-wrapper {
+            border: 0 none;
+        }
+    }
+}
+
+// Dashboard >> Overview & Subsciption
+.settingsDashboard-container {
+    .settingsDashboard-overview-section-table-container,
+    .settingsDashboard-subscription-section-table-container {
+        border: 0 none;
+        border-radius: 2px;
+        @include card-box-shadow;
+    }
+}
+
+.storageBar {
+    background: lighten($primary-color, 40%);
+    .storageBar-progress {
+        background: $primary-color;
+    }
+}
+
+.overviewSection-container .topUp-button {
+    color: $primary-color;
+}
+
+// Dashboard >> Plans >> Currency Selector
+.currencySelector-container {
+    .currencySelector-button {
+        color: $buttons-color;
+        border-radius: 2px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        &:first-child,
+        &:last-child {
+            border-radius: 2px;
+        }
+        &:hover,
+        &:focus {
+            background: $buttons-background-hover;
+            color: $buttons-color-active;
+        }
+        &:active {
+            background: $buttons-background-active;
+            color: $buttons-color-active;
+        }
+        &.active {
+            background: $primary-color;
+            color: #ffffff;
+        }
+    }
+}
+
+// Dashboard >> Plans
+.settingsDashboard-plans {
+    background-image: radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.3), transparent), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.3), transparent);
+    [class*=Column-container] {
+        border: 1px solid #BDBDBD;
+        &>:not(:last-child) {
+            border-bottom: 1px solid #BDBDBD;
+        }
+        [class*=Column-sending],
+        [class*=Column-labels],
+        [class*=Column-support],
+        [class*=Column-filters],
+        [class*=Column-autoresponder],
+        [class*=Column-catch-all],
+        [class*=Column-member] {
+            border: 0;
+        }
+        .isCurrent {
+            border-bottom: 1px solid $primary-color;
+            background: $primary-color;
+            -webkit-box-shadow: 0 0 8px $primary-color, 0 0 0 2px $primary-color;
+            box-shadow: 0 0 8px $primary-color, 0 0 0 2px $primary-color;
+        }
+    }
+    &.free-active .freeColumn-container,
+    &.plus-active .plusColumn-container,
+    &.professional-active .professionalColumn-container,
+    &.visionary-active .visionaryColumn-container {
+        border: 1px solid $primary-color;
+        -webkit-box-shadow: 0 0 8px $primary-color, 0 0 0 2px $primary-color;
+        box-shadow: 0 0 8px $primary-color, 0 0 0 2px $primary-color;
+    }
+}
+
+.giftCodeBtn-container {
+    color: $secondary-color;
+}
+
+.vpnRow-add {
+    color: #ffffff;
+    background: $secondary-color;
+    &:hover,
+    &:focus {
+        color: #ffffff;
+        background: lighten($secondary-color, 5%);
+    }
+}
+
+.settingsDashboard-plans .freeColumn-free,
+.totalRows-monthly-price,
+.totalRows-yearly-price {
+    color: $primary-color
+}
+
+[class*=settingsDashboard-arrowToScroll] .arrowsToScroll-button {
+    background: rgba(0, 0, 0, 0.6);
+    &:hover {
+        background: rgba(0, 0, 0, 0.9);
+    }
+}
+
+#pm_composer .composer .attachmentBar i.embedded,
+.headerBlock-container [class*=link] {
+    color: $primary-color;
+}
+
+// Appearance >> Laypout Images
+#pm_settings .settings .row .setting .radio img {
+    @include img-make-gray;
+}
+
+// Addresses & Users
+.member-table-addresses {
+    &::before {
+        background: #BDBDBD;
+    }
+    tbody tr::before {
+        color: #BDBDBD;
+    }
+}
+
+// Payments
+.settingsPayment-header-invoices {
+    margin-top: 16px;
+}
+
+// ProtonVPN
+.vpn-container {
+    .vpn-ressourcesSection-clients-list {
+        border: 0 none;
+        background: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .vpn-ressourcesSection-clients-item-container {
+        border: 0 none;
+        @include card-box-shadow;
+        i,
+        .vpn-ressourcesSection-clients-item-text {
+            transition: all .3s cubic-bezier(.25, .46, .45, .94);
+        }
+        &:not(.disabled):hover {
+            @include card-box-shadow-z3;
+            .vpn-ressourcesSection-clients-item-icon,
+            .vpn-ressourcesSection-clients-item-text {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+/* --- Mobile --- */
+
+.headerSecured-container {
+    background: $primary-color;
+}
+
+body.appConfigBody-is-mobile {
+    // Mobile Checkbox
+    .customMaskInput-mask {
+        width: 18px;
+        height: 18px;
+        border: 2px solid #bdbdbd;
+    }
+}
+
+// Header Buttons
+.headerSecuredMobile-compose,
+.headerSecuredMobile-searchBtn,
+.headerSecuredMobile-toggleSidebar,
+.sidebarMobileHeader-btn-sidebar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    padding: 8px;
+    margin-right: 4px;
+    font-size: 18px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 100ms ease-in;
+    @include ripple-effect;
+    i {
+        width: 24px;
+        height: 24px;
+        background: none;
+    }
+}
+
+.appConfigBody-showSidebar {
+    // Hide sidemenu toggle, search and compose when sidebar is open
+    .headerSecuredMobile-compose,
+    .headerSecuredMobile-searchBtn,
+    .headerSecuredMobile-toggleSidebar {
+        opacity: 0;
+    } // Disable clicking on content while sidemenu is open
+    #pm_main {
+        pointer-events: none;
+        &::after {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 9;
+            background: rgba(0, 0, 0, 0.5);
+            content: " ";
+        }
+    }
+}
+
+.btnDisplayMobileSidebar-container.round i {
+    width: 24px;
+    height: 24px;
+    background: none;
+}
+
+// Sidebar
+.sidebarMobileHeader-logo {
+    display: none;
+}
+
+.sidebarMobileHeader-userDisplay {
+    display: none;
+    color: $font-color;
+}
+
+// Toolbar
+.toolbarMobile-container .pm_buttons,
+.toolbarMobile-container .pm_buttons a {
+    height: 40px;
+}
+
+// Message
+body.appConfigBody-is-mobile #conversation-view .message .summary {
+    .labels,
+    .time,
+    .status {
+        line-height: 20px;
+        font-size: 12px;
+    }
+    .labels {
+        top: 4px;
+        right: 16px;
+        bottom: auto;
+    }
+    .time,
+    .status {
+        top: 24px;
+    }
+    .time {
+        right: 54px;
+        background: #ffffff;
+    }
+    .status {
+        right: 18px;
+    }
+}

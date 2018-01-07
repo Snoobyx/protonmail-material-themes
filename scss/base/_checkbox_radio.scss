@@ -1,0 +1,51 @@
+// Checkbox and Radio
+.customMaskInput-mask {
+    background-color: transparent;
+    border: 1px solid #BDBDBD;
+}
+
+.customCheckbox-input+.customCheckbox-mask {
+    background-size: 0 0;
+}
+
+// Checkbox and Radio :hover & :focus
+.customMaskInput-container:hover [class*=customMaskInput-input]:not(:disabled)+.customMaskInput-mask,
+[class*=customMaskInput-input]:focus+.customMaskInput-mask {
+    border-color: #757575;
+}
+
+// Checkbox and Radio DISABLED
+[class*=customMaskInput-input]:disabled+.customMaskInput-mask,
+[class*=customMaskInput-input][disabled]+.customMaskInput-mask {
+    background-color: transparent;
+}
+
+// Radio CHECKED
+.customRadio-input:checked+.customRadio-mask {
+    box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 10px $primary-color;
+    border-color: $primary-color !important;
+}
+
+// Radio DISABLED
+.customRadio-input:checked:disabled+.customRadio-mask {
+    box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 10px lighten($buttons-color, 36%);
+    ;
+    border-color: transparent;
+}
+
+// Checkbox CHECKED
+.customCheckbox-input:checked+.customCheckbox-mask {
+    background-color: $primary-color;
+    border-color: $primary-color !important;
+}
+
+// Checkbox DISABLED
+.customCheckbox-input:disabled+.customCheckbox-mask,
+.customCheckbox-input:indeterminate+.customCheckbox-mask {
+    border-color: lighten($buttons-color, 36%);
+    background-color: transparent;
+}
+
+.pm_form label>:not(:only-child) {
+    margin-right: 15px;
+}

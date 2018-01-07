@@ -1,0 +1,149 @@
+/* --- Sidebar --- */
+
+.sidebarApp-container {
+    background: $sidebar-background;
+    .sidebarApp-wrapper {
+        display: inline-grid;
+    }
+    .menuLabel-link .menuLabel-counter,
+    .menuLabel-link .navigationItem-aside,
+    .navigationItem-item .menuLabel-counter,
+    .navigationItem-item .navigationItem-aside,
+    .menuLabel-item .menuLabel-counter,
+    .sidebarApp-item .navigationItem-counter {
+        color: $sidebar-color;
+    }
+    .footer {
+        div {
+            &.link a {
+                color: $sidebar-color;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+            &.storage strong {
+                color: $sidebar-color;
+            }
+        }
+        .storageBar {
+            background: $sidebar-background-active;
+        }
+    }
+    .version {
+        color: $sidebar-color;
+        &:hover {
+            color: $primary-color;
+        }
+    } // Compose Button
+    .sidebar-btn-compose,
+    .sidebar-btn-back {
+        width: auto;
+        margin: 4px 12px 18px;
+        font-size: 0.9em;
+        font-weight: 400;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2);
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+        .fa {
+            padding-right: 0;
+            font-size: 12px;
+        }
+    }
+    .sidebar-btn-compose {
+        background: $secondary-color;
+        &:hover,
+        &:focus,
+        &:active {
+            background: lighten($secondary-color, 5%);
+        }
+        .fa {
+            display: none;
+        }
+    }
+    .sidebar-btn-back {
+        position: relative;
+        overflow: hidden;
+        border: 0 none;
+        background: #FFFFFF;
+        color: $font-color;
+        transform: translate3d(0, 0, 0);
+        transition: all 300ms cubic-bezier(.25, .8, .25, 1);
+        @include ripple-effect;
+    }
+}
+
+.sidebarApp-menu {
+    margin: 0;
+}
+
+.sidebarApp-item .navigationItem-item,
+.sidebarApp-item .sidebarApp-link,
+.sidebarApp-menu .menuLabel-link {
+    height: 40px;
+    padding: 0 12px 0 16px;
+    font-size: 14px;
+    color: $sidebar-color;
+}
+
+.menuLabel-item,
+.sidebarApp-item,
+.sidebarApp-item {
+    &:hover {
+        background: $sidebar-background-hover;
+    }
+    .navigationItem-item,
+    .sidebarApp-link,
+    .menuLabel-link {
+        &:hover {
+            color: $sidebar-color-active;
+        }
+    }
+    &.active {
+        .navigationItem-item,
+        .sidebarApp-link,
+        .menuLabel-link {
+            background: $sidebar-background-active;
+            color: $sidebar-color-active;
+            .navigationItem-icon,
+            .sidebarApp-icon,
+            .fa,
+            .menuLabel-icon {
+                color: $sidebar-color-active;
+            }
+        }
+    }
+}
+
+.menuLabel-item.active .menuLabel-title {
+    color: $sidebar-color-active;
+}
+
+.sidebarApp-item .navigationItem-icon,
+.sidebarApp-item .sidebarApp-icon,
+.sidebarApp-link .fa,
+.sidebarApp-menu .menuLabel-icon {
+    padding-right: 18px;
+    font-size: 18px;
+    color: $sidebar-color;
+}
+
+
+/* Labels */
+
+#sidebarLabels {
+    margin: 0;
+}
+
+
+/* Specific Icon Colors */
+
+.sidebarApp-icon.navigationItem-icon.fa.fa-inbox {
+    color: $primary-color;
+}
+
+// .sidebarApp-icon.navigationItem-icon.fa.fa-star-o {
+//     color: #FBC02D;
+// }

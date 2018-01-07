@@ -1,0 +1,65 @@
+// Toggle
+.pm_toggle {
+    width: 34px;
+    height: 14px;
+    line-height: 36px;
+    margin: 12px 42px 12px 8px;
+    background: #9E9E9E;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    &.on {
+        background: lighten($primary-color, 25%);
+    }
+    span {
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    span.knob {
+        display: block;
+        top: 50%;
+        bottom: auto;
+        left: auto;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        margin: 0;
+        border: 0 none;
+        border-radius: 50%;
+        transform: translate(0, -50%);
+        background: $primary-color;
+        -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+    }
+    &.off .knob {
+        left: 0;
+        background: #ffffff;
+    }
+    &.on .knob {
+        left: 0;
+        transform: translate(80%, -50%);
+    }
+    span.on,
+    span.off {
+        top: -10px;
+        left: auto;
+        right: -46px;
+        width: 46px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 0;
+    }
+    &.on .on,
+    &.off .off {
+        background: transparent;
+        color: $font-color;
+        opacity: 1;
+    }
+    &.off .on,
+    &.on .off {
+        background: transparent;
+        opacity: 0;
+        &:hover {
+            opacity: 0;
+        }
+    }
+}

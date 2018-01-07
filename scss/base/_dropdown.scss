@@ -1,0 +1,38 @@
+// Dropdown
+.pm_dropdown, .squireToolbar-select-list {
+    margin-top: 0;
+    border: 1px solid #E0E0E0;
+    @include card-box-shadow-z2;
+    &>a,
+    &>button,
+    &>ul>li {
+        border-bottom: 1px solid #E0E0E0;
+        &:hover {
+            color: $font-color !important;
+        }
+    }
+}
+
+.dropdown-label-alsoArchive {
+    border-top: 1px solid #E0E0E0;
+}
+
+.dropdown-label-search .fa.dropdown-label-search-icon,
+.dropdown-folder-search .fa.dropdown-folder-search-icon,
+.dropdown-folder-create-button,
+.createLabel-button {
+    color: $font-color;
+}
+
+.scrollbox-container {
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.dropdown-folder-search .dropdown-folder-search-input,
+.dropdown-label-search .dropdown-label-search-input,
+.dropdown-folder-create-button,
+.createLabel-button {
+    height: 40px;
+    min-height: 40px;
+}

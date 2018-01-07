@@ -1,0 +1,27 @@
+// Alert
+.alert {
+    background: #f5f5f5;
+    a {
+        color: $primary-color;
+    }
+    &.alert-danger,
+    &.alert-info,
+    &.alert-success,
+    &.alert-warning {
+        a {
+            color: $font-color;
+        }
+    }
+    &.alert-danger {
+        background: #FFCCBC;
+    }
+    &.alert-info {
+        background: #ECEFF1;
+    }
+    &.alert-success {
+        background: #DCEDC8;
+    }
+    &.alert-warning {
+        background: #FFF9C4;
+    }
+}

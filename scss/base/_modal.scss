@@ -1,0 +1,26 @@
+// Modal
+.pm_modal {
+    background: rgba(0, 0, 0, 0.5);
+    .modal-dialog {
+        border: 0 none;
+        border-radius: 2px;
+        @include card-box-shadow-z2;
+        .modal-content {
+            border-radius: 2px 2px 0 0;
+            .modal-body {
+                box-shadow: inset 0 1px 0 #E0E0E0, inset 0 -1px 0 #E0E0E0;
+            }
+        }
+        .modal-footer {
+            border-radius: 0 0 2px 2px;
+        }
+        .close {
+            width: 36px;
+            height: 36px;
+            top: 0;
+            right: 0;
+            color: #616161;
+            background: transparent;
+        }
+    }
+}

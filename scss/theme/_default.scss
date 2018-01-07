@@ -1,0 +1,67 @@
+/* =========================================== *
+ * Author: Denis Zhekov
+ * Website: http://snoobyx.com
+ * Tweeter: https://twitter.com/snoobyx
+ * =========================================== */
+
+// Base
+$font-family: 'Helvetica Neue',
+Helvetica,
+Arial,
+sans-serif !default;
+$font-color: #212121 !default;
+$body-background: #EEEEEE !default;
+$primary-color: #505061 !default;
+$secondary-color: #9397CD !default;
+$primary-color-highlight: lighten($primary-color, 42%);
+// Base - Buttons
+$buttons-color: #616161;
+$buttons-color-active: $font-color !default;
+$buttons-background: rgba(0, 0, 0, 0) !default;
+$buttons-background-hover: rgba(0, 0, 0, 0.03) !default;
+$buttons-background-active: rgba(0, 0, 0, 0.05) !default;
+// Header
+$header-height: 56px;
+$header-background: $primary-color !default;
+$header-color: #FFFFFF !default;
+// Sidebar
+$sidebar-width: 232px !default;
+$sidebar-background: $body-background !default;
+// Sidebar - Buttons
+$sidebar-color: #616161 !default;
+$sidebar-color-active: $font-color !default;
+$sidebar-background-hover: rgba(0, 0, 0, 0.03) !default;
+$sidebar-background-active: rgba(0, 0, 0, 0.05) !default;
+// Import Styles
+// Base
+@import "../base/base",
+"../base/mixins",
+"../base/proton_loader",
+"../base/inputs",
+"../base/checkbox_radio",
+"../base/button_groups",
+"../base/button",
+"../base/toggle",
+"../base/allert",
+"../base/table",
+"../base/sort_item",
+"../base/badges",
+"../base/labels_stars",
+"../base/modal",
+"../base/notify_message",
+"../base/dropdown";
+// Layout
+@import "../layout/layout",
+"../layout/mobile";
+// Modules
+@import "../module/header",
+"../module/sidebar",
+"../module/specific_button_groups",
+"../module/toolbar",
+"../module/composer_toolbar",
+"../module/composer",
+"../module/conversation_list",
+"../module/conversation",
+"../module/contacts",
+"../module/settings",
+"../module/mobile";

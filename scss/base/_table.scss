@@ -1,0 +1,37 @@
+// Table
+.pm_table {
+    table {
+        margin: 0;
+        border: 0 none;
+        &.bordered {
+            border: 0 none;
+        } // Table Heading
+        thead {
+            border-top: 0 none;
+        }
+        th,
+        td {
+            line-height: 48px;
+            padding: 0 24px;
+            border-bottom: 1px solid #E0E0E0;
+            background: transparent;
+            color: $font-color;
+            a {
+                color: $font-color;
+                cursor: pointer;
+            }
+            .fa {
+                color: inherit;
+            }
+            .checkbox {
+                width: 38px;
+            }
+        }
+        th {
+            border-bottom: 1px solid #BDBDBD;
+            color: $font-color;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+    }
+}

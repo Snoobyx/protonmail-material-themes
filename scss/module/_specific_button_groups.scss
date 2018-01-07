@@ -1,0 +1,59 @@
+// Toolbar Buttons
+.readUnread-container.disabled [class*=readUnread-btn],
+.moveElement-container.disabled [class*=moveElement-btn] {
+    color: lighten($buttons-color, 36%);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.readUnread-container-ur .readUnread-btn-read {
+    border-left: 0 none!important
+}
+
+.paginator {
+    .fa {
+        font-size: 12px;
+    }
+}
+
+.paginator-dropdown-list {
+    font-size: 17.5px;
+}
+
+.paginator-disabled-main .paginator-dropdown,
+.paginator-disabled-next .paginator-btn-next,
+.paginator-disabled-previous .paginator-btn-previous {
+    color: lighten($buttons-color, 36%);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+// Toolbar >> Choose Layout
+.toolbarDesktop-container .layout a img {
+    @include img-make-gray;
+}
+
+.chooseLayoutBtns-container {
+    &.chooseLayoutBtns-container-rows .chooseLayoutBtns-btn-rows,
+    &:not(.chooseLayoutBtns-container-rows) .chooseLayoutBtns-btn-column {
+        background: $primary-color;
+        color: #ffffff;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        img {
+            @include img-make-white;
+        }
+    }
+}
+
+// Settings >> Security >> Authentication Logs
+.securityContainer {
+    &.activeLog .activeLogBtn,
+    &.activeLogAdvanced .activeLogAdvancedBtn,
+    &.noLog .noLogBtn {
+        background: $primary-color;
+        color: #ffffff;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}

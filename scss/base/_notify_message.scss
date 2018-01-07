@@ -1,0 +1,16 @@
+// Notify Message
+body .cg-notify-message {
+    background: #616161;
+    &.notification-success {
+        background: #7CB342;
+    }
+    &.notification-warning {
+        background: #FDD835;
+    }
+    &.notification-danger {
+        background: #F4511E;
+    }
+    &.notification-info {
+        background: #78909C;
+    }
+}

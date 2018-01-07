@@ -1,0 +1,23 @@
+//  Sort Item
+.pm_sort-container {
+    background: #ffffff;
+    border: 0 none;
+    @include card-box-shadow;
+}
+
+.pm_sort-item {
+    &.highlight {
+        background: $primary-color-highlight;
+    }
+}
+
+.pm_sort-item-content {
+    border-bottom: 1px solid #E0E0E0;
+    &>::last-child {
+        border-bottom: 0 none;
+    }
+}
+
+.as-sortable-item-handle::before {
+    margin-right: 12px;
+}

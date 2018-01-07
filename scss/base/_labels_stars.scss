@@ -1,0 +1,40 @@
+// Labels for messages
+.pm_labels {
+    [class*="-label"] {
+        padding: 0 0 0 8px;
+        margin-left: 4px;
+        font-size: 14px;
+        border-radius: 2px;
+    }
+    [class*="-name"] {
+        padding: 2px 8px 2px 0;
+    }
+}
+
+.labelsElement-label {
+    &::before {
+        color: attr(data-color);
+    }
+    background: currentColor!important;
+    border: 0 none!important;
+    .labelsElement-name,
+    .labelsElement-btn-remove {
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .labelsElement-btn-remove {
+        height: 100%;
+        padding: 0 4px;
+        border-radius: 0 2px 2px 0;
+        &:hover {
+            background: rgba(0, 0, 0, 0.1);
+            color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+
+// Stars
+body #conversation-list-rows .conversation .fa-star,
+.conversation .row .meta .fa-star,
+#conversation-view .fa-star {
+    color: #FBC02D;
+}

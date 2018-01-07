@@ -1,0 +1,56 @@
+/* --- Toolbar --- */
+
+.pm_toolbar {
+    background: $body-background;
+    box-shadow: none;
+    .customCheckbox-mask {
+        border-color: $buttons-color;
+    }
+}
+
+// Toolbar Checkbox
+.rows {
+    .pm_toolbar.pm_toolbar_withSelector {
+        padding: 10px 25px;
+    }
+    .toolBar-select-all {
+        width: 72px;
+        height: 100%;
+        margin-right: 0;
+        .customCheckbox-mask {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #BDBDBD;
+        }
+    }
+}
+
+// Toolbar Contacts
+#pm_contacts {
+    .pm_toolbar {
+        padding: 10px 25px;
+    }
+    .pm_button {
+        background: rgba(0, 0, 0, 0);
+        color: $buttons-color;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        &:hover,
+        &:focus {
+            background: $buttons-background-hover;
+            color: $buttons-color-active;
+        }
+        &.active,
+        &:active {
+            background: $buttons-background-active;
+            color: $buttons-color-active;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}
+
+// Back and Next buttons
+[class*=navElements-btn]+[class*=navElements-btn] {
+    border: 0 none;
+}

@@ -1,0 +1,164 @@
+/* --- Conversation --- */
+
+#conversation-view {
+    #conversationHeader {
+        padding: 0 8px;
+        border-bottom: 1px solid #E0E0E0;
+        background: #fff;
+        h1 {
+            padding: 12px 36px 12px 12px;
+            line-height: 26px;
+            min-height: 26px;
+            font-size: 18px;
+            .starButton {
+                top: 8px;
+                right: -2px;
+                a {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .message {
+        margin: 0 8px;
+        border: 0;
+        border-bottom: 1px solid #E0E0E0;
+        .summary {
+            background: #F5F5F5;
+        } // Show details
+        &:last-child {
+            margin-bottom: 40px;
+        }
+        &.open {
+            background: #FFFFFF;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            .summary {
+                background: #FFFFFF;
+            }
+        }
+        .summary {
+            .labels,
+            .status,
+            .time {
+                margin-left: 0;
+                background: inherit;
+            }
+            .time {
+                padding-left: 14px;
+                &::after {
+                    left: -4px;
+                    width: 4px;
+                    height: 100%;
+                    background: inherit;
+                }
+            }
+        }
+        .toggleDetails {
+            color: $buttons-color;
+            &:hover {
+                color: #212121;
+            }
+        }
+        .details {
+            padding: 0 10px;
+            background: #FFFFFF;
+        }
+        .frame {
+            padding: 16px 32px;
+            border-top: 1px solid #E0E0E0;
+        }
+    }
+}
+
+.messageExtra-container {
+    &>[class*='-container'] {
+        border-top: 1px solid #E0E0E0;
+        background: #F5F5F5;
+        color: $font-color;
+        font-size: 14px;
+        &>[class$='-notice'] {
+            padding-left: 40px;
+            &::before {
+                width: 44px;
+            }
+        }
+        [class$='-notice-text'] {
+            font-weight: 400;
+        }
+        a {
+            color: $buttons-color;
+            &:hover {
+                color: #212121;
+            }
+        }
+    }
+}
+
+// Message compose button
+.messageContacts-btn-compose,
+#conversation-view .message .message-contact-sender {
+    color: $buttons-color;
+    &:hover {
+        color: #212121;
+    }
+}
+
+// Conversation List Rows >> Conversation
+body .rows {
+    #pm_thread {
+        overflow: scroll;
+    }
+    #conversation-view {
+        background: $body-background;
+        #conversationHeader {
+            margin: 1px 31px 0 14px;
+            border-bottom: 0 none;
+            z-index: 1;
+            -webkit-box-shadow: rgb(224, 224, 224) 0px -1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 2px;
+            box-shadow: rgb(224, 224, 224) 0px -1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 2px;
+        }
+        .messageExtra-container {
+            &>[class*='-container'] {
+                background: #FFFFFF;
+                &>[class*='-button'] {
+                    color: $primary-color;
+                    background: transparent;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+        }
+        .message {
+            margin: 1px 14px 0;
+            border-bottom: 0 none;
+            @include list-box-shadow;
+            &:last-child {
+                margin-bottom: 40px;
+            }
+            .frame {
+                border-bottom: 0 none;
+            }
+            .summary {
+                height: 44px;
+                line-height: 44px;
+                padding: 0 16px;
+                background: #FFFFFF;
+                .pull-left {
+                    left: 16px;
+                }
+            }
+            .toggleDetails {
+                padding: 0 1px;
+            }
+            .details {
+                padding: 0 16px;
+            }
+        }
+    }
+}

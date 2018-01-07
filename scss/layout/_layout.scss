@@ -1,0 +1,15 @@
+/* --- Layout --- */
+
+// Sidebar
+.sidebarApp-container {
+    min-width: $sidebar-width;
+    width: $sidebar-width;
+    height: calc(100% - 4px);
+    padding: 12px 8px 52px;
+}
+
+// PM Main
+body #pm_main {
+    width: calc(100% - #{$sidebar-width});
+    height: calc(100% - 56px);
+}

@@ -1,0 +1,159 @@
+/* --- New Message Composer --- */
+
+#pm_composer .composer {
+    bottom: 0;
+    height: 600px !important;
+    .meta {
+        color: #757575;
+    }
+    .pm_button {
+        margin-right: 0;
+    }
+    .row,
+    footer,
+    header {
+        line-height: 40px;
+    }
+    .row {
+        padding: 0 0 0 20px;
+        border-bottom: 1px solid #E0E0E0;
+        input,
+        select {
+            height: 40px;
+            line-height: 40px;
+        }
+        .pm_button.link {
+            height: 100%;
+            line-height: 40px;
+            color: $buttons-color;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            &:hover,
+            &:focus {
+                background: $buttons-background-hover;
+                color: $buttons-color-active;
+            }
+            &.active,
+            &:active {
+                background: $buttons-background-active;
+                color: $buttons-color-active;
+            }
+        }
+    }
+    header {
+        background: #424242;
+    }
+    footer {
+        line-height: 36px;
+        padding: 14px 20px;
+        border: 0 none;
+        background: #FFFFFF;
+        .pm_button {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 10px;
+            border: 0 none;
+            color: $buttons-color;
+            border-radius: 2px;
+            box-shadow: none;
+            &:hover,
+            &:focus {
+                background: $buttons-background-hover;
+                color: $buttons-color-active;
+            }
+            &.active,
+            &:active {
+                background: $buttons-background-active;
+                color: $buttons-color-active;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+            &.primary {
+                color: #fff;
+                background: $primary-color;
+                &:hover,
+                &:focus,
+                &:active {
+                    background: lighten($primary-color, 5%);
+                }
+            }
+            &.disabled {
+                background: lighten($primary-color, 15%);
+            }
+        }
+    }
+    .angular-squire-wrapper {
+        padding: 10px 10px 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+.composerInputMeta-container {
+    max-height: 40px;
+}
+
+.composerInputMeta-overlay {
+    padding: 0 35px 0 20px;
+}
+
+.composerHeader-btn {
+    height: 40px !important;
+    color: #FFFFFF;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    opacity: 0.6;
+    &:hover,
+    &:focus,
+    &:active {
+        opacity: 1;
+    }
+}
+
+.composerHeader-subject {
+    padding: 0 0 0 20px;
+}
+
+@media (min-width: 600px) {
+    #pm_composer .composer {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+    }
+}
+
+// Minimized
+#pm_composer .composer.minimized {
+    height: 40px !important;
+    header {
+        border-radius: 2px 2px 0 0;
+    }
+}
+
+// Maximized
+#pm_composer .composer.maximized {
+    top: $header-height + 14px;
+    bottom: 0;
+    right: 0;
+    left: $sidebar-width + 28px;
+    width: calc(100% - ( #{$sidebar-width} + 14px))
+}
+
+// Mobile
+@media screen and (max-width:1030px) {
+    #pm_composer .composer.maximized {
+        left: 0!important;
+        top: 0;
+        width: 100%;
+        height: 100%!important;
+        -webkit-transform: translateX(0)!important;
+        transform: translateX(0)!important;
+        border-radius: 0;
+        header {
+            height: $header-height;
+            line-height: $header-height;
+        }
+        .composerHeader-btn {
+            width: 40px;
+            height: $header-height !important;
+        }
+    }
+}

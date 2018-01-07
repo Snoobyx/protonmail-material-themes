@@ -1,0 +1,23 @@
+// Badges
+.pm_badge,
+.pm_tag {
+    background: #BDBDBD;
+}
+
+.pm_badge {
+    &.default {
+        color: $font-color;
+    }
+    &.primary {
+        background-color: lighten($primary-color, 20%);
+    }
+    &.success {
+        background-color: #8BC34A;
+    }
+    &.error {
+        background-color: #FF5722;
+    }
+    &.warning {
+        background-color: #FFEB3B;
+    }
+}

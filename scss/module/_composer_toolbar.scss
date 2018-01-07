@@ -1,0 +1,58 @@
+/* --- Composer Toolbar --- */
+
+[class*=squireToolbar-row] {
+    min-height: 36px;
+    margin: 0 6px;
+    border: 0 none;
+    background: #fff;
+    [class*=squireToolbar-action-] {
+        width: 28px;
+        height: 28px;
+        margin: 0;
+        border-radius: 3px;
+        opacity: 0.6;
+        color: $font-color;
+        &:hover:not(:active),
+        &:active {
+            border: 0 none;
+            box-shadow: inset 0 0 0 1px #fff;
+            opacity: 1;
+        }
+    }
+    .squireToolbar-select-view .squireToolbar-action-modeEditor {
+        opacity: 0;
+        &:hover,
+        &:hover:not(:active) {
+            opacity: 0;
+        }
+    }
+}
+
+[class*="squireToolbar-row"] .squireToolbar-select-view button:active,
+[class*="squireToolbar-row"] .squireToolbar-select-view button:hover,
+[class*="squireToolbar-row"] .squireToolbar-select-view button:hover:not(:active) {}
+
+.squireToolbar-separator {
+    height: 28px;
+    margin: 0 6px;
+    background: #e5e5e5;
+}
+
+.squireToolbar-container.align-center .squireToolbar-action-acenter,
+.squireToolbar-container.align-left .squireToolbar-action-aleft,
+.squireToolbar-container.align-right .squireToolbar-action-aright,
+.squireToolbar-container.b .squireToolbar-action-bold,
+.squireToolbar-container.i .squireToolbar-action-italic,
+.squireToolbar-container.ol.li .squireToolbar-action-olist,
+.squireToolbar-container.open-image .squireToolbar-action-image,
+.squireToolbar-container.open-link .squireToolbar-action-link,
+.squireToolbar-container.u .squireToolbar-action-underline,
+.squireToolbar-container.ul.li .squireToolbar-action-ulist {
+    background: rgba(0, 0, 0, .12);
+    opacity: 1;
+    box-shadow: inset 0 0 0 1px #fff;
+}
+
+#pm_settings .settings .squireToolbar-container {
+    border: 0 none;
+}

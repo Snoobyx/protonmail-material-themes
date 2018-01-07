@@ -1,0 +1,80 @@
+/* --- Conversation List --- */
+
+.conversation-wrapper {
+    background: $body-background;
+}
+
+// Conversation List Column
+body #conversation-list-columns {
+    border-right: 1px solid #E0E0E0;
+}
+
+.conversation {
+    border-bottom: 1px solid #BDBDBD;
+    background: #ffffff;
+    &.read {
+        border-bottom: 1px solid #E0E0E0;
+        background: #f5f5f5;
+    }
+    &.active {
+        background: $primary-color-highlight;
+        color: $font-color;
+        .customMaskInput-mask {
+            border-color: #757575;
+        }
+    }
+    .labelsElement-label {
+        zoom: 0.8;
+    }
+}
+
+// When multiple conversations are selected a counter view instead of conversation view  
+.countElementsSelected-container {
+    background: $body-background;
+}
+
+// Conversation List Rows
+body #conversation-list-rows .conversation {
+    height: 44px;
+    line-height: 44px;
+    margin: 1px 14px 0;
+    border: 0;
+    @include list-box-shadow;
+    .labelsElement-label {
+        zoom: 1;
+    }
+    &:last-child {
+        margin-bottom: 24px;
+    }
+    &.read {
+        background: #ffffff;
+    } // Conversation Checkbox
+    .ptSelectConversation-container {
+        width: 72px;
+        .customCheckbox-mask {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #BDBDBD;
+        }
+    }
+    .subject {
+        width: calc(84% - 308px);
+    }
+    .size {
+        width: 70px;
+        padding-right: 14px;
+        font-size: 12px;
+        color: #616161;
+    }
+    .conversation-icon-attachmen {}
+    .time {
+        font-size: 14px;
+        width: 96px;
+        padding-left: 14px;
+    }
+}
+
+.conversation.marked::before {
+    width: 2px;
+    background: $primary-color;
+}

@@ -1,0 +1,87 @@
+// Button
+.pm_button {
+    position: relative;
+    overflow: hidden;
+    margin-right: 5px;
+    border: 0 none;
+    color: $font-color;
+    transform: translate3d(0, 0, 0);
+    transition: all 300ms cubic-bezier(.25, .8, .25, 1);
+    box-shadow: none;
+    @include ripple-effect;
+    &:hover,
+    &:focus,
+    &:active {
+        background: rgba(0, 0, 0, 0.03);
+    }
+    &.primary,
+    &.success,
+    &.error,
+    &.round {
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2);
+        &:hover,
+        &:focus,
+        &:active {
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+    }
+    &.primary {
+        background: $primary-color;
+        &:hover,
+        &:focus,
+        &:active {
+            background: lighten($primary-color, 5%);
+        }
+        &.disabled,
+        &[disabled] {
+            background: lighten($primary-color, 15%);
+        }
+    }
+    &.link {
+        color: $primary-color;
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+            background: transparent;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+        &.disabled,
+        &[disabled] {
+            color: lighten($primary-color, 15%);
+        }
+    }
+    &.success {
+        background: #7CB342;
+        &:hover,
+        &:focus {
+            background: lighten(#7CB342, 5%);
+        }
+        &.disabled,
+        &[disabled] {
+            background: lighten(#7CB342, 15%);
+        }
+    }
+    &.error {
+        background: #F4511E;
+        &:hover,
+        &:focus {
+            background: lighten(#F4511E, 5%);
+        }
+        &.disabled,
+        &[disabled] {
+            background: lighten(#F4511E, 15%);
+        }
+    }
+    &.round {
+        border: 0 none;
+        border-radius: 2px;
+        .fa {
+            color: $font-color;
+        }
+    }
+}
+
+.pm_dropdown .navigationUser-logout:hover {
+    background: lighten($primary-color, 5%) !important;
+}

@@ -1,0 +1,152 @@
+/* --- Contacts --- */
+
+// Contact list toolbar
+.contactsToolbar-container {
+    box-sizing: border-box;
+    height: 56px;
+    padding: 10px 10px 10px 4px;
+    background: $body-background;
+    border: 0 none;
+    box-shadow: none;
+    .customCheckbox-mask {
+        border-color: $buttons-color;
+    }
+}
+
+.contactsToolbar-selectAll {
+    width: 30px;
+    height: 35px;
+    margin: 0 15px 0 0;
+}
+
+// Contact list container
+.contactList-container {
+    border-right: 1px solid #E0E0E0;
+    .contactList-checkbox {
+        position: relative;
+    }
+    .customMaskInput-container {
+        height: 46px;
+    }
+}
+
+// Contact list header
+.contactList-table .contactList-thead th {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.contactList-toggle-sort-container {
+    height: 46px;
+}
+
+// Contact list active item
+.contactList-item-activeContact {
+    .contactList-checkbox::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: $primary-color;
+        content: " ";
+    }
+    .customCheckbox-mask {
+        border-color: #757575;
+    }
+    background: $primary-color-highlight;
+    td * {
+        color: $font-color;
+    }
+}
+
+// Contact details
+.contactDetails-container>* {
+    padding: 0;
+}
+
+.contactDetails-nav {
+    height: 60px;
+    min-height: 60px;
+    padding: 20px 25px 0 25px;
+    box-shadow: none;
+}
+
+.contactDetails-nav-title {
+    font-size: 24px;
+}
+
+.contactDetails-details {
+    padding-bottom: 20px;
+}
+
+.contactDetails-fields-container {
+    padding: 20px 25px;
+    margin: 0;
+    border-color: #E0E0E0;
+    border-width: 1px 0 0 0;
+    border-radius: 0;
+}
+
+.contactDetails-fields-ico {
+    color: #828282;
+    @include img-make-gray;
+}
+
+.contactItem-actions>button {
+    color: #828282;
+    &:hover {
+        color: $font-color;
+    }
+}
+
+.contactItem-add::before,
+.contactItem-delete::before {
+    @include img-make-gray;
+}
+
+.contactItem-inputs {
+    input,
+    textarea {
+        font-size: 14px;
+        border: 1px solid #E0E0E0;
+        color: $font-color;
+        background: transparent;
+        box-shadow: none;
+        &:hover {
+            border: 1px solid #E0E0E0;
+        }
+        &:focus {
+            border: 1px solid $primary-color;
+        }
+    }
+    input {
+        padding: 0 16px;
+    }
+    textarea {
+        padding: 8px 16px;
+    }
+}
+
+.contactAddressInput-label {
+    font-size: 12px;
+    color: $buttons-color;
+}
+
+.contactItem-selectType {
+    max-height: 165px;
+    margin-top: 0;
+    border: 1px solid #E0E0E0;
+    @include card-box-shadow-z2;
+}
+
+.contactPlaceholder-container,
+.contactNoResult-container {
+    color: $font-color;
+    .contactNoResult-import {
+        background: #ffffff;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2);
+        &:hover {
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+    }
+}

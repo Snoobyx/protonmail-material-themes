@@ -1,0 +1,78 @@
+// Inputs
+.pm_form {
+    input {
+        &[type=text],
+        &[type=number],
+        &[type=tel],
+        &[type=password],
+        &[type=email],
+        &[type=search] {
+            padding: 0 16px;
+            font-size: 14px;
+            border: 1px solid #ffffff;
+            color: $font-color;
+            background: #ffffff;
+            box-shadow: none;
+            &:hover {
+                border: 1px solid #ffffff;
+            }
+            &:focus {
+                border: 1px solid $primary-color;
+            }
+            &.ng-invalid.always-show-ng-invalid,
+            &.ng-invalid.ng-touched {
+                border-color: #FF5722;
+            }
+        }
+    }
+    select,
+    .pm_select {
+        -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.2);
+        &:hover {
+            -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+        &:active,
+        &:focus {
+            -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.2);
+        }
+    }
+    textarea,
+    .pm_textarea {
+        &:hover {
+            border: 1px solid #E0E0E0;
+        }
+        &:focus {
+            border: 1px solid $primary-color;
+        }
+    }
+    select,
+    textarea {
+        padding: 0 16px;
+        border: 1px solid #E0E0E0;
+        color: $font-color;
+        background: #ffffff;
+        box-shadow: none;
+        &.ng-invalid.always-show-ng-invalid,
+        &.ng-invalid.ng-touched {
+            border-color: #FF5722;
+        }
+    }
+    label {
+        height: 36px;
+    }
+    .toolbar-button-options label {
+        &:hover {
+            span {
+                background: rgba(0, 0, 0, 0.03);
+            }
+        }
+        &:active {
+            span {
+                background: rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+}
